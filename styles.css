@@ -93,3 +93,83 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #64748b;
 }
+
+/* Layout für den Inhalt */
+.competition-card a {
+  display: block;
+  position: relative; /* ermöglicht absolute Positionierung des Protokoll-Links */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  padding-right: 150px; /* Platz für den Protokoll-Link rechts schaffen */
+}
+
+/* Überschrift */
+.league-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #facc15;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Header: Datum + Ort */
+.card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-header .left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Protokoll-Link fixiert rechts */
+.card-header .right {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  color: #60a5fa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Teams in einer Zeile, größer und mit mehr Abstand nach oben */
+.teams-inline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem; /* mehr Abstand nach oben */
+}
+
+.team-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.team-inline img.team-logo {
+  height: 55px;
+  width: auto;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px;
+}
+
+.teams-inline .vs {
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+
