@@ -57,7 +57,7 @@ h1 {
 
 .date {
   flex-shrink: 0;
-  width: 120px;
+  width: 250px;
   font-weight: 600;
   color: #60a5fa;
 }
