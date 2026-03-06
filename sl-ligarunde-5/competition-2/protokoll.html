@@ -4,26 +4,46 @@
 <title>Protokoll – 1. WKT</title>
 <style>
 body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f8fafc;color:#1e293b}
-.wrap{max-width:1100px;margin:0 auto;padding:24px}
+.wrap{max-width:960px;margin:0 auto;padding:24px}
 h1{font-size:1.4rem;font-weight:700;margin:0 0 4px}
-h2{font-size:1rem;font-weight:700;margin:20px 0 6px;color:#1e40af;border-bottom:2px solid #1e40af;padding-bottom:4px}
-.meta{font-size:.82rem;color:#64748b;margin-bottom:16px}
-table{width:100%;border-collapse:collapse;font-size:.78rem;margin-bottom:8px}
-th{background:#1e3a5f;color:#fff;padding:5px 7px;text-align:left;font-weight:600;white-space:nowrap}
-td{padding:4px 7px;border-bottom:1px solid #e2e8f0;white-space:nowrap}
+h2{font-size:1rem;font-weight:700;margin:20px 0 8px;color:#1e40af;border-bottom:2px solid #1e40af;padding-bottom:4px}
+.meta{font-size:.82rem;color:#64748b;margin-bottom:20px}
+/* Standings table */
+table{width:100%;border-collapse:collapse;font-size:.8rem;margin-bottom:8px}
+th{background:#1e3a5f;color:#fff;padding:5px 8px;text-align:left;font-weight:600;white-space:nowrap}
+td{padding:5px 8px;border-bottom:1px solid #e2e8f0;white-space:nowrap}
 tr:nth-child(even) td{background:#f1f5f9}
 .place{display:inline-block;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-weight:700;font-size:.8rem;color:#fff}
+.team-logo{width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-right:6px}
+.num-cell{text-align:right}.num-cell.center{text-align:center}
+.rnd-score{font-weight:600}.rnd-dgp{font-size:.7rem;color:#64748b}
+/* Team cards */
+.team-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:14px;overflow:hidden;page-break-inside:avoid}
+.team-card-hdr{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:.9rem}
+.team-athletes{padding:0}
+.athlete-row{padding:8px 12px;border-bottom:1px solid #f1f5f9}
+.athlete-row:last-child{border-bottom:none}
+.athlete-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.athlete-name{font-weight:600;font-size:.85rem}
+.athlete-total{font-weight:700;font-size:.85rem;color:#1e293b}
+.prov-badge{background:#fef9c3;color:#a16207;font-size:.65rem;padding:1px 5px;border-radius:3px;margin-left:5px;font-weight:600}
+/* Round detail lines */
+.rd-line{display:flex;align-items:baseline;gap:6px;font-size:.72rem;color:#1e293b;line-height:1.5}
+.rd-line.ak-detail-row{font-style:italic;color:#94a3b8}
+.rd-label{flex-shrink:0;width:44px;color:#64748b;font-weight:600;white-space:nowrap}
+.rd-detail{flex:1;color:#64748b}
+.rd-result{flex-shrink:0;width:68px;text-align:right;font-weight:700;white-space:nowrap}
+.ak{background:#94a3b8;color:#fff;font-size:.6rem;padding:1px 3px;border-radius:3px;margin-left:3px;font-style:normal}
+.muted{color:#94a3b8;font-weight:400}
+/* Kampfgericht */
+.officials-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;font-size:.8rem}
+.official-entry{color:#374151}
+.official-role{font-weight:600;color:#1e293b}
+/* Utils */
 .section-box{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;margin-bottom:14px}
-.ak{background:#94a3b8;color:#fff;font-size:.65rem;padding:1px 4px;border-radius:3px;margin-left:3px}
-.ak-row{font-style:italic;color:#94a3b8}
-.dropped{text-decoration:line-through;color:#94a3b8}
 .back-link{display:inline-block;margin-top:20px;font-size:.85rem;color:#1e40af}
 .footer{font-size:.72rem;color:#94a3b8;margin-top:24px;text-align:right}
-@media print{
-  body{background:#fff}
-  .section-box{page-break-inside:avoid}
-  .back-link{display:none}
-}
+@media print{body{background:#fff}.back-link{display:none}.team-card{page-break-inside:avoid}}
 </style>
 </head><body><div class="wrap">
 <h1>Wettkampfprotokoll – 1. WKT</h1>
@@ -31,1176 +51,532 @@ tr:nth-child(even) td{background:#f1f5f9}
 
 <div class="section-box">
   <h2>Endergebnis</h2>
-  <table><thead><tr><th>#</th><th>Mannschaft</th><th style="text-align:right">Gesamtpunkte</th><th style="text-align:center">WKP</th><th style="text-align:center">DGP</th></tr></thead>
-  <tbody><tr>
-    <td><span class="place" style="background:#f59e0b">1</span></td>
-    <td>
-      <strong>TB Ruit 1892 e.V. 1</strong>
-      <div style="font-size:.72rem;color:#64748b;margin-top:2px">P: 110,90 (2 DGP) &nbsp;·&nbsp; K1: 125,46 (1 DGP) &nbsp;·&nbsp; K2: 123,61 (1 DGP)</div>
-    </td>
-    <td style="text-align:right;font-weight:700">359,97</td>
-    <td style="text-align:center">1</td>
-    <td style="text-align:center">4</td>
-  </tr><tr>
-    <td><span class="place" style="background:#94a3b8">2</span></td>
-    <td>
-      <strong>VfL Sindelfingen</strong>
-      <div style="font-size:.72rem;color:#64748b;margin-top:2px">P: 112,50 (1 DGP) &nbsp;·&nbsp; K1: 122,30 (2 DGP) &nbsp;·&nbsp; K2: 120,31 (2 DGP)</div>
-    </td>
-    <td style="text-align:right;font-weight:700">355,11</td>
-    <td style="text-align:center">2</td>
-    <td style="text-align:center">5</td>
-  </tr><tr>
-    <td><span class="place" style="background:#b45309">3</span></td>
-    <td>
-      <strong>VfL Sindelfingen 2</strong>
-      <div style="font-size:.72rem;color:#64748b;margin-top:2px">P: 103,80 (4 DGP) &nbsp;·&nbsp; K1: 109,00 (3 DGP) &nbsp;·&nbsp; K2: 98,30 (4 DGP)</div>
-    </td>
-    <td style="text-align:right;font-weight:700">311,10</td>
-    <td style="text-align:center">3</td>
-    <td style="text-align:center">11</td>
-  </tr><tr>
-    <td><span class="place" style="background:#6b7280">4</span></td>
-    <td>
-      <strong>TSV Musterhausen</strong>
-      <div style="font-size:.72rem;color:#64748b;margin-top:2px">P: 105,40 (3 DGP) &nbsp;·&nbsp; K1: 105,75 (4 DGP) &nbsp;·&nbsp; K2: 97,90 (5 DGP)</div>
-    </td>
-    <td style="text-align:right;font-weight:700">309,05</td>
-    <td style="text-align:center">4</td>
-    <td style="text-align:center">12</td>
-  </tr><tr>
-    <td><span class="place" style="background:#6b7280">5</span></td>
-    <td>
-      <strong>TB Ruit 1892 e.V. 2</strong>
-      <div style="font-size:.72rem;color:#64748b;margin-top:2px">P: 92,90 (5 DGP) &nbsp;·&nbsp; K1: 101,45 (5 DGP) &nbsp;·&nbsp; K2: 110,20 (3 DGP)</div>
-    </td>
-    <td style="text-align:right;font-weight:700">304,55</td>
-    <td style="text-align:center">5</td>
-    <td style="text-align:center">13</td>
-  </tr></tbody></table>
+  <table><thead><tr>
+        <th>#</th><th>Mannschaft</th>
+        <th class="num-cell">Pflicht</th><th class="num-cell">1. Kür</th><th class="num-cell">2. Kür</th>
+        <th class="num-cell">Gesamt</th><th class="num-cell center">WKP</th><th class="num-cell center">DGP ges.</th>
+      </tr></thead><tbody><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><strong>TB Ruit 1892 e.V. 1</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">110,90</div><div class="rnd-dgp">DGP: 2</div></td>
+          <td class="num-cell"><div class="rnd-score">125,46</div><div class="rnd-dgp">DGP: 1</div></td>
+          <td class="num-cell"><div class="rnd-score">123,61</div><div class="rnd-dgp">DGP: 1</div></td>
+          <td class="num-cell"><strong>359,97</strong></td>
+          <td class="num-cell center">1</td>
+          <td class="num-cell center">4</td>
+        </tr><tr>
+          <td><span class="place" style="background:#94a3b8">2</span></td>
+          <td><div class="team-row"><strong>VfL Sindelfingen</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">112,50</div><div class="rnd-dgp">DGP: 1</div></td>
+          <td class="num-cell"><div class="rnd-score">122,30</div><div class="rnd-dgp">DGP: 2</div></td>
+          <td class="num-cell"><div class="rnd-score">120,31</div><div class="rnd-dgp">DGP: 2</div></td>
+          <td class="num-cell"><strong>355,11</strong></td>
+          <td class="num-cell center">2</td>
+          <td class="num-cell center">5</td>
+        </tr><tr>
+          <td><span class="place" style="background:#b45309">3</span></td>
+          <td><div class="team-row"><strong>VfL Sindelfingen 2</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">103,80</div><div class="rnd-dgp">DGP: 4</div></td>
+          <td class="num-cell"><div class="rnd-score">109,00</div><div class="rnd-dgp">DGP: 3</div></td>
+          <td class="num-cell"><div class="rnd-score">98,30</div><div class="rnd-dgp">DGP: 4</div></td>
+          <td class="num-cell"><strong>311,10</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">11</td>
+        </tr><tr>
+          <td><span class="place" style="background:#6b7280">4</span></td>
+          <td><div class="team-row"><strong>TSV Musterhausen</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">105,40</div><div class="rnd-dgp">DGP: 3</div></td>
+          <td class="num-cell"><div class="rnd-score">105,75</div><div class="rnd-dgp">DGP: 4</div></td>
+          <td class="num-cell"><div class="rnd-score">97,90</div><div class="rnd-dgp">DGP: 5</div></td>
+          <td class="num-cell"><strong>309,05</strong></td>
+          <td class="num-cell center">4</td>
+          <td class="num-cell center">12</td>
+        </tr><tr>
+          <td><span class="place" style="background:#6b7280">5</span></td>
+          <td><div class="team-row"><strong>TB Ruit 1892 e.V. 2</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">92,90</div><div class="rnd-dgp">DGP: 5</div></td>
+          <td class="num-cell"><div class="rnd-score">101,45</div><div class="rnd-dgp">DGP: 5</div></td>
+          <td class="num-cell"><div class="rnd-score">110,20</div><div class="rnd-dgp">DGP: 3</div></td>
+          <td class="num-cell"><strong>304,55</strong></td>
+          <td class="num-cell center">5</td>
+          <td class="num-cell center">13</td>
+        </tr></tbody></table>
 </div>
 
-<div class="section-box">
-          <h2>Pflicht</h2>
-          <table style="margin-bottom:12px"><thead><tr>
-            <th>#</th><th>Mannschaft</th><th style="text-align:right">Punkte</th><th style="text-align:center">DGP</th>
-          </tr></thead><tbody><tr>
-          <td><span class="place" style="background:#f59e0b">1</span></td>
-          <td>VfL Sindelfingen</td>
-          <td style="text-align:right">112,50</td>
-          <td style="text-align:center">1</td>
-        </tr><tr>
-          <td><span class="place" style="background:#94a3b8">2</span></td>
-          <td>TB Ruit 1892 e.V. 1</td>
-          <td style="text-align:right">110,90</td>
-          <td style="text-align:center">2</td>
-        </tr><tr>
-          <td><span class="place" style="background:#b45309">3</span></td>
-          <td>TSV Musterhausen</td>
-          <td style="text-align:right">105,40</td>
-          <td style="text-align:center">3</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">4</span></td>
-          <td>VfL Sindelfingen 2</td>
-          <td style="text-align:right">103,80</td>
-          <td style="text-align:center">4</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">5</span></td>
-          <td>TB Ruit 1892 e.V. 2</td>
-          <td style="text-align:right">92,90</td>
-          <td style="text-align:center">5</td>
-        </tr></tbody></table>
-          <div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 1</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                <th>Pflicht</th>
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Jakob Faiß</span></td>
-              <td>7,1</td><td>7,1</td>
-              <td>7,1</td><td>7,1</td>
-              <td>14,20</td>
-              <td>11,00</td>
-              <td>9,20</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="">34,40</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="dropped">Jan Felde</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>10,00</td>
-              <td>9,20</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="dropped">34,20</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Laura Fodor</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M5</td>
-              <td><strong class="">37,50</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="dropped">Sophie Lang</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>11,00</td>
-              <td>9,20</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="dropped">34,20</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="">Lina Mühlbauer</span></td>
-              <td>8,5</td><td>8,5</td>
-              <td>8,5</td><td>8,5</td>
-              <td>17,00</td>
-              <td>12,50</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>W11</td>
-              <td><strong class="">39,00</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                <th>Pflicht</th>
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Luisa Aubele</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>8,00</td>
-              <td>9,80</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M1</td>
-              <td><strong class="">30,80</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Leonita Busati</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M3</td>
-              <td><strong class="">31,50</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="dropped">Elina Ettenauer</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,50</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M2</td>
-              <td><strong class="dropped">30,00</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Aurelia Füssel</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,80</td>
-              <td>9,80</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M1</td>
-              <td><strong class="">30,60</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="dropped">Romy Gerschek</span></td>
-              <td>3,6</td><td>3,6</td>
-              <td>3,6</td><td>3,6</td>
-              <td>7,20</td>
-              <td>4,00</td>
-              <td>3,90</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M2</td>
-              <td><strong class="dropped">15,10</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TSV Musterhausen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                <th>Pflicht</th>
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="dropped">Alberta Albertson</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M2</td>
-              <td><strong class="dropped">33,50</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Gutrun Gotthilf</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>11,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M3</td>
-              <td><strong class="">34,50</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Hermine Humus</span></td>
-              <td>7,7</td><td>7,7</td>
-              <td>7,7</td><td>7,7</td>
-              <td>15,40</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="">34,90</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Theo Theoson</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>12,00</td>
-              <td>9,00</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="">36,00</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                <th>Pflicht</th>
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="dropped">Pascal Fotler</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>12,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="dropped">36,50</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Anna Knäb</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,00</td>
-              <td>9,20</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M5</td>
-              <td><strong class="">37,20</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="dropped">Leni Caroline Schneider</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>11,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M5</td>
-              <td><strong class="dropped">36,50</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Luise Annette Schneider</span></td>
-              <td>8,5</td><td>8,5</td>
-              <td>8,5</td><td>8,5</td>
-              <td>17,00</td>
-              <td>12,50</td>
-              <td>9,20</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>W11</td>
-              <td><strong class="">38,70</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="">Maria Elisabeth Walter</span></td>
-              <td>7,6</td><td>7,6</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,10</td>
-              <td>12,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M5</td>
-              <td><strong class="">36,60</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                <th>Pflicht</th>
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="dropped">Mateo Berghoff</span></td>
-              <td>6,4</td><td>6,4</td>
-              <td>6,4</td><td>6,4</td>
-              <td>12,80</td>
-              <td>9,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M2</td>
-              <td><strong class="dropped">31,30</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Katharina Breuning</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>12,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="">36,50</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Kira Amy Heinz</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>11,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M3</td>
-              <td><strong class="">34,50</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Luna Holzer</span></td>
-              <td>6,6</td><td>6,6</td>
-              <td>6,6</td><td>6,6</td>
-              <td>13,20</td>
-              <td>9,80</td>
-              <td>9,80</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M2</td>
-              <td><strong class="">32,80</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="dropped">Joas Proß</span></td>
-              <td>6,0</td><td>6,0</td>
-              <td>6,0</td><td>6,0</td>
-              <td>12,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>0,0</td>
-              <td>0,00</td>
-              <td>M4</td>
-              <td><strong class="dropped">31,50</strong></td>
-            </tr></tbody>
-            </table>
+<h2>Detailergebnisse</h2>
+<div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <strong>TB Ruit 1892 e.V. 1</strong>
           </div>
-        </div><div class="section-box">
-          <h2>1. Kür</h2>
-          <table style="margin-bottom:12px"><thead><tr>
-            <th>#</th><th>Mannschaft</th><th style="text-align:right">Punkte</th><th style="text-align:center">DGP</th>
-          </tr></thead><tbody><tr>
-          <td><span class="place" style="background:#f59e0b">1</span></td>
-          <td>TB Ruit 1892 e.V. 1</td>
-          <td style="text-align:right">125,46</td>
-          <td style="text-align:center">1</td>
-        </tr><tr>
-          <td><span class="place" style="background:#94a3b8">2</span></td>
-          <td>VfL Sindelfingen</td>
-          <td style="text-align:right">122,30</td>
-          <td style="text-align:center">2</td>
-        </tr><tr>
-          <td><span class="place" style="background:#b45309">3</span></td>
-          <td>VfL Sindelfingen 2</td>
-          <td style="text-align:right">109,00</td>
-          <td style="text-align:center">3</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">4</span></td>
-          <td>TSV Musterhausen</td>
-          <td style="text-align:right">105,75</td>
-          <td style="text-align:center">4</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">5</span></td>
-          <td>TB Ruit 1892 e.V. 2</td>
-          <td style="text-align:right">101,45</td>
-          <td style="text-align:center">5</td>
-        </tr></tbody></table>
-          <div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 1</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="ak-row">
-              <td>1</td>
-              <td><span class="">Aurora Pisanu</span><span class="ak">AK</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,50</td>
-              <td>9,50</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="">31,00</strong></td>
-            </tr><tr class="ak-row">
-              <td>2</td>
-              <td><span class="">Malia Riemer</span><span class="ak">AK</span></td>
-              <td>0,9</td><td>0,8</td>
-              <td>0,8</td><td>0,8</td>
-              <td>1,60</td>
-              <td>0,88</td>
-              <td>1,00</td>
-              <td>0,6</td>
-              <td>0,00</td>
-              
-              <td><strong class="">4,08</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Jakob Faiß</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>11,50</td>
-              <td>9,20</td>
-              <td>3,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">38,10</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="dropped">Jan Felde</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>10,00</td>
-              <td>9,20</td>
-              <td>2,6</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">35,80</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="dropped">Sophie Lang</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>11,01</td>
-              <td>9,20</td>
-              <td>2,6</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">35,81</strong></td>
-            </tr><tr class="">
-              <td>6</td>
-              <td><span class="">Lina Mühlbauer</span></td>
-              <td>8,5</td><td>8,5</td>
-              <td>8,8</td><td>8,5</td>
-              <td>17,00</td>
-              <td>12,50</td>
-              <td>9,50</td>
-              <td>4,2</td>
-              <td>0,00</td>
-              
-              <td><strong class="">43,20</strong></td>
-            </tr><tr class="">
-              <td>7</td>
-              <td><span class="">Laura Fodor</span></td>
-              <td>8,8</td><td>8,8</td>
-              <td>8,8</td><td>8,7</td>
-              <td>17,60</td>
-              <td>12,66</td>
-              <td>9,50</td>
-              <td>4,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">44,16</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Luisa Aubele</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>8,55</td>
-              <td>9,80</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="">32,35</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Leonita Busati</span></td>
-              <td>7,0</td><td>7,2</td>
-              <td>7,2</td><td>7,2</td>
-              <td>14,40</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">35,60</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Elina Ettenauer</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>9,00</td>
-              <td>9,50</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="">33,50</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="dropped">Aurelia Füssel</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,80</td>
-              <td>9,50</td>
-              <td>1,1</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">31,40</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="dropped">Romy Gerschek</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,50</td>
-              <td>9,50</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">30,90</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TSV Musterhausen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Alberta Albertson</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="">34,50</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Gutrun Gotthilf</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,50</td>
-              <td>9,20</td>
-              <td>2,8</td>
-              <td>0,00</td>
-              
-              <td><strong class="">40,50</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Hermine Humus</span></td>
-              <td>5,5</td><td>5,5</td>
-              <td>5,5</td><td>5,5</td>
-              <td>11,00</td>
-              <td>8,55</td>
-              <td>9,00</td>
-              <td>2,2</td>
-              <td>0,00</td>
-              
-              <td><strong class="">30,75</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="ak-row">
-              <td>1</td>
-              <td><span class="">Pascal Fotler</span><span class="ak">AK</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>12,00</td>
-              <td>9,00</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">37,70</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Anna Knäb</span></td>
-              <td>7,7</td><td>8,0</td>
-              <td>7,9</td><td>7,8</td>
-              <td>15,70</td>
-              <td>12,50</td>
-              <td>9,20</td>
-              <td>3,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">40,80</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Leni Caroline Schneider</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>12,00</td>
-              <td>9,20</td>
-              <td>3,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">39,60</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Luise Annette Schneider</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,50</td>
-              <td>9,20</td>
-              <td>4,2</td>
-              <td>0,00</td>
-              
-              <td><strong class="">41,90</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="dropped">Mateo Berghoff</span></td>
-              <td>6,0</td><td>6,0</td>
-              <td>6,0</td><td>6,0</td>
-              <td>12,00</td>
-              <td>10,00</td>
-              <td>9,00</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">32,70</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Katharina Breuning</span></td>
-              <td>7,2</td><td>7,3</td>
-              <td>7,2</td><td>7,3</td>
-              <td>14,50</td>
-              <td>11,00</td>
-              <td>9,20</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">36,40</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Kira Amy Heinz</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">36,20</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Luna Holzer</span></td>
-              <td>7,7</td><td>7,7</td>
-              <td>7,7</td><td>7,7</td>
-              <td>15,40</td>
-              <td>9,80</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">36,40</strong></td>
-            </tr></tbody>
-            </table>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Jakob Faiß</span>
+              <span class="athlete-total"><strong>109,90</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,2 | H1: 7,1 | H2: 7,1 | H3: 7,1 | H4: 7,1 – Pflicht: M4 – ToF: 11,00 | HD: 9,20 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,40</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 11,50 | HD: 9,20 | Schwierigkeit: 3,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>38,10</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 11,00 | HD: 9,00 | Schwierigkeit: 2,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>37,40</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Aurora Pisanu</span>
+              <span class="athlete-total"><strong>64,20</strong> Pkt.</span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">1. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 7,50 | HD: 9,50 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">31,00&nbsp;(AK)</span></span>
+            </div><div class="rd-line ak-detail-row">
+              <span class="rd-label">2. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 8,00 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">33,20&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Jan Felde</span>
+              <span class="athlete-total"><strong>106,81</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – Pflicht: M4 – ToF: 10,00 | HD: 9,20 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>34,20</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 10,00 | HD: 9,20 | Schwierigkeit: 2,6 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>35,80</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 11,11 | HD: 9,00 | Schwierigkeit: 2,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>36,81</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Malia Riemer</span>
+              <span class="athlete-total"><strong>39,78</strong> Pkt.</span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">1. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 1,6 | H1: 0,9 | H2: 0,8 | H3: 0,8 | H4: 0,8 – ToF: 0,88 | HD: 1,00 | Schwierigkeit: 0,6 – Abzug: -0,0 | Sprünge: 1</span>
+              <span class="rd-result"><span class="muted">4,08&nbsp;(AK)</span></span>
+            </div><div class="rd-line ak-detail-row">
+              <span class="rd-label">2. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 9,50 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">35,70&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Laura Fodor</span>
+              <span class="athlete-total"><strong>124,76</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – Pflicht: M5 – ToF: 12,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>37,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 17,6 | H1: 8,8 | H2: 8,8 | H3: 8,8 | H4: 8,7 – ToF: 12,66 | HD: 9,50 | Schwierigkeit: 4,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>44,16</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 16,4 | H1: 8,2 | H2: 8,2 | H3: 8,2 | H4: 8,2 – ToF: 12,80 | HD: 9,50 | Schwierigkeit: 4,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>43,10</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Sophie Lang</span>
+              <span class="athlete-total"><strong>107,62</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – Pflicht: M4 – ToF: 11,00 | HD: 9,20 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>34,20</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 11,01 | HD: 9,20 | Schwierigkeit: 2,6 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>35,81</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 11,11 | HD: 9,20 | Schwierigkeit: 2,3 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>37,61</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Lina Mühlbauer</span>
+              <span class="athlete-total"><strong>125,10</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 17,0 | H1: 8,5 | H2: 8,5 | H3: 8,5 | H4: 8,5 – Pflicht: W11 – ToF: 12,50 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>39,00</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 17,0 | H1: 8,5 | H2: 8,5 | H3: 8,8 | H4: 8,5 – ToF: 12,50 | HD: 9,50 | Schwierigkeit: 4,2 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>43,20</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 17,0 | H1: 8,5 | H2: 8,5 | H3: 8,5 | H4: 8,5 – ToF: 12,20 | HD: 9,50 | Schwierigkeit: 4,2 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>42,90</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#94a3b8">2</span>
+            <strong>VfL Sindelfingen</strong>
           </div>
-        </div><div class="section-box">
-          <h2>2. Kür</h2>
-          <table style="margin-bottom:12px"><thead><tr>
-            <th>#</th><th>Mannschaft</th><th style="text-align:right">Punkte</th><th style="text-align:center">DGP</th>
-          </tr></thead><tbody><tr>
-          <td><span class="place" style="background:#f59e0b">1</span></td>
-          <td>TB Ruit 1892 e.V. 1</td>
-          <td style="text-align:right">123,61</td>
-          <td style="text-align:center">1</td>
-        </tr><tr>
-          <td><span class="place" style="background:#94a3b8">2</span></td>
-          <td>VfL Sindelfingen</td>
-          <td style="text-align:right">120,31</td>
-          <td style="text-align:center">2</td>
-        </tr><tr>
-          <td><span class="place" style="background:#b45309">3</span></td>
-          <td>TB Ruit 1892 e.V. 2</td>
-          <td style="text-align:right">110,20</td>
-          <td style="text-align:center">3</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">4</span></td>
-          <td>VfL Sindelfingen 2</td>
-          <td style="text-align:right">98,30</td>
-          <td style="text-align:center">4</td>
-        </tr><tr>
-          <td><span class="place" style="background:#6b7280">5</span></td>
-          <td>TSV Musterhausen</td>
-          <td style="text-align:right">97,90</td>
-          <td style="text-align:center">5</td>
-        </tr></tbody></table>
-          <div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 1</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="ak-row">
-              <td>1</td>
-              <td><span class="">Aurora Pisanu</span><span class="ak">AK</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,00</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">33,20</strong></td>
-            </tr><tr class="ak-row">
-              <td>2</td>
-              <td><span class="">Malia Riemer</span><span class="ak">AK</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>9,50</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">35,70</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="dropped">Jakob Faiß</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>11,00</td>
-              <td>9,00</td>
-              <td>2,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">37,40</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="dropped">Jan Felde</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>11,11</td>
-              <td>9,00</td>
-              <td>2,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">36,81</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="">Sophie Lang</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>11,11</td>
-              <td>9,20</td>
-              <td>2,3</td>
-              <td>0,00</td>
-              
-              <td><strong class="">37,61</strong></td>
-            </tr><tr class="">
-              <td>6</td>
-              <td><span class="">Lina Mühlbauer</span></td>
-              <td>8,5</td><td>8,5</td>
-              <td>8,5</td><td>8,5</td>
-              <td>17,00</td>
-              <td>12,20</td>
-              <td>9,50</td>
-              <td>4,2</td>
-              <td>0,00</td>
-              
-              <td><strong class="">42,90</strong></td>
-            </tr><tr class="">
-              <td>7</td>
-              <td><span class="">Laura Fodor</span></td>
-              <td>8,2</td><td>8,2</td>
-              <td>8,2</td><td>8,2</td>
-              <td>16,40</td>
-              <td>12,80</td>
-              <td>9,50</td>
-              <td>4,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">43,10</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TB Ruit 1892 e.V. 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="dropped">Luisa Aubele</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>7,50</td>
-              <td>9,50</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">31,00</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Leonita Busati</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>2,1</td>
-              <td>0,00</td>
-              
-              <td><strong class="">36,60</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Elina Ettenauer</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>8,0</td><td>8,2</td>
-              <td>15,50</td>
-              <td>10,50</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">37,20</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Aurelia Füssel</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>10,00</td>
-              <td>9,50</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="">36,40</strong></td>
-            </tr><tr class="">
-              <td>5</td>
-              <td><span class="dropped">Romy Gerschek</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>8,80</td>
-              <td>9,50</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">32,20</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">TSV Musterhausen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Alberta Albertson</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>9,50</td>
-              <td>9,50</td>
-              <td>1,0</td>
-              <td>0,00</td>
-              
-              <td><strong class="">34,00</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Gutrun Gotthilf</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,50</td>
-              <td>9,00</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="">32,40</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Hermine Humus</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>8,00</td>
-              <td>8,80</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">31,50</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="ak-row">
-              <td>1</td>
-              <td><span class="">Pascal Fotler</span><span class="ak">AK</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,00</td>
-              <td>9,50</td>
-              <td>2,1</td>
-              <td>0,00</td>
-              
-              <td><strong class="">33,60</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Anna Knäb</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,50</td>
-              <td>9,20</td>
-              <td>3,4</td>
-              <td>0,00</td>
-              
-              <td><strong class="">41,10</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Leni Caroline Schneider</span></td>
-              <td>7,5</td><td>7,5</td>
-              <td>7,5</td><td>7,5</td>
-              <td>15,00</td>
-              <td>11,11</td>
-              <td>9,20</td>
-              <td>2,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">38,01</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="">Luise Annette Schneider</span></td>
-              <td>8,0</td><td>8,0</td>
-              <td>8,0</td><td>8,0</td>
-              <td>16,00</td>
-              <td>12,00</td>
-              <td>9,00</td>
-              <td>4,2</td>
-              <td>0,00</td>
-              
-              <td><strong class="">41,20</strong></td>
-            </tr></tbody>
-            </table>
-          </div><div style="margin-bottom:12px">
-            <p style="font-weight:700;margin:8px 0 4px">VfL Sindelfingen 2</p>
-            <table>
-              <thead><tr>
-                <th>#</th><th>Sportler</th>
-                <th>H1</th><th>H2</th><th>H3</th><th>H4</th>
-                <th>Ausf.</th><th>ToF</th><th>HD</th><th>Schw.</th><th>Abzug</th>
-                
-                <th>Erg.</th>
-              </tr></thead>
-              <tbody><tr class="">
-              <td>1</td>
-              <td><span class="">Mateo Berghoff</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,00</td>
-              <td>9,00</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="">31,90</strong></td>
-            </tr><tr class="">
-              <td>2</td>
-              <td><span class="">Katharina Breuning</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>9,50</td>
-              <td>9,50</td>
-              <td>1,7</td>
-              <td>0,00</td>
-              
-              <td><strong class="">34,70</strong></td>
-            </tr><tr class="">
-              <td>3</td>
-              <td><span class="">Kira Amy Heinz</span></td>
-              <td>7,0</td><td>7,0</td>
-              <td>7,0</td><td>7,0</td>
-              <td>14,00</td>
-              <td>8,00</td>
-              <td>8,80</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="">31,70</strong></td>
-            </tr><tr class="">
-              <td>4</td>
-              <td><span class="dropped">Luna Holzer</span></td>
-              <td>6,5</td><td>6,5</td>
-              <td>6,5</td><td>6,5</td>
-              <td>13,00</td>
-              <td>8,00</td>
-              <td>8,80</td>
-              <td>0,9</td>
-              <td>0,00</td>
-              
-              <td><strong class="dropped">30,70</strong></td>
-            </tr></tbody>
-            </table>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Pascal Fotler</span>
+              <span class="athlete-total"><strong>107,80</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – Pflicht: M4 – ToF: 12,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>36,50</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line ak-detail-row">
+              <span class="rd-label">1. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 12,00 | HD: 9,00 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">37,70&nbsp;(AK)</span></span>
+            </div><div class="rd-line ak-detail-row">
+              <span class="rd-label">2. Kür<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 8,00 | HD: 9,50 | Schwierigkeit: 2,1 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">33,60&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Anna Knäb</span>
+              <span class="athlete-total"><strong>119,10</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – Pflicht: M5 – ToF: 12,00 | HD: 9,20 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>37,20</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 15,7 | H1: 7,7 | H2: 8,0 | H3: 7,9 | H4: 7,8 – ToF: 12,50 | HD: 9,20 | Schwierigkeit: 3,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>40,80</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – ToF: 12,50 | HD: 9,20 | Schwierigkeit: 3,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>41,10</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Leni Caroline Schneider</span>
+              <span class="athlete-total"><strong>114,11</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – Pflicht: M5 – ToF: 11,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>36,50</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 12,00 | HD: 9,20 | Schwierigkeit: 3,4 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>39,60</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 11,11 | HD: 9,20 | Schwierigkeit: 2,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>38,01</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Luise Annette Schneider</span>
+              <span class="athlete-total"><strong>121,80</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 17,0 | H1: 8,5 | H2: 8,5 | H3: 8,5 | H4: 8,5 – Pflicht: W11 – ToF: 12,50 | HD: 9,20 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>38,70</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – ToF: 12,50 | HD: 9,20 | Schwierigkeit: 4,2 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>41,90</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – ToF: 12,00 | HD: 9,00 | Schwierigkeit: 4,2 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>41,20</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Maria Elisabeth Walter</span>
+              <span class="athlete-total"><strong>36,60</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,1 | H1: 7,6 | H2: 7,6 | H3: 7,5 | H4: 7,5 – Pflicht: M5 – ToF: 12,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,60</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#b45309">3</span>
+            <strong>VfL Sindelfingen 2</strong>
           </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Mateo Berghoff</span>
+              <span class="athlete-total"><strong>95,90</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 12,8 | H1: 6,4 | H2: 6,4 | H3: 6,4 | H4: 6,4 – Pflicht: M2 – ToF: 9,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>31,30</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 12,0 | H1: 6,0 | H2: 6,0 | H3: 6,0 | H4: 6,0 – ToF: 10,00 | HD: 9,00 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>32,70</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 8,00 | HD: 9,00 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>31,90</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Katharina Breuning</span>
+              <span class="athlete-total"><strong>107,60</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – Pflicht: M4 – ToF: 12,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,5 | H1: 7,2 | H2: 7,3 | H3: 7,2 | H4: 7,3 – ToF: 11,00 | HD: 9,20 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,40</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 9,50 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,70</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Kira Amy Heinz</span>
+              <span class="athlete-total"><strong>102,40</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – Pflicht: M3 – ToF: 11,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,20</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 8,00 | HD: 8,80 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>31,70</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Luna Holzer</span>
+              <span class="athlete-total"><strong>99,90</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 13,2 | H1: 6,6 | H2: 6,6 | H3: 6,6 | H4: 6,6 – Pflicht: M2 – ToF: 9,80 | HD: 9,80 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>32,80</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 15,4 | H1: 7,7 | H2: 7,7 | H3: 7,7 | H4: 7,7 – ToF: 9,80 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,40</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 8,00 | HD: 8,80 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>30,70</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Joas Proß</span>
+              <span class="athlete-total"><strong>31,50</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 12,0 | H1: 6,0 | H2: 6,0 | H3: 6,0 | H4: 6,0 – Pflicht: M4 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>31,50</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#6b7280">4</span>
+            <strong>TSV Musterhausen</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Alberta Albertson</span>
+              <span class="athlete-total"><strong>102,00</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – Pflicht: M2 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>33,50</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 9,50 | HD: 9,50 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,00</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Gutrun Gotthilf</span>
+              <span class="athlete-total"><strong>107,40</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – Pflicht: M3 – ToF: 11,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – ToF: 12,50 | HD: 9,20 | Schwierigkeit: 2,8 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>40,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 8,50 | HD: 9,00 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>32,40</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Hermine Humus</span>
+              <span class="athlete-total"><strong>97,15</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,4 | H1: 7,7 | H2: 7,7 | H3: 7,7 | H4: 7,7 – Pflicht: M4 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>34,90</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 11,0 | H1: 5,5 | H2: 5,5 | H3: 5,5 | H4: 5,5 – ToF: 8,55 | HD: 9,00 | Schwierigkeit: 2,2 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>30,75</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 8,00 | HD: 8,80 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>31,50</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Theo Theoson</span>
+              <span class="athlete-total"><strong>36,00</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – Pflicht: M4 – ToF: 12,00 | HD: 9,00 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,00</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#6b7280">5</span>
+            <strong>TB Ruit 1892 e.V. 2</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Luisa Aubele</span>
+              <span class="athlete-total"><strong>94,15</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – Pflicht: M1 – ToF: 8,00 | HD: 9,80 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>30,80</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 8,55 | HD: 9,80 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>32,35</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 7,50 | HD: 9,50 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>31,00</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Leonita Busati</span>
+              <span class="athlete-total"><strong>103,70</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – Pflicht: M3 – ToF: 8,00 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>31,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,4 | H1: 7,0 | H2: 7,2 | H3: 7,2 | H4: 7,2 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>35,60</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 15,0 | H1: 7,5 | H2: 7,5 | H3: 7,5 | H4: 7,5 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 2,1 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,60</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Elina Ettenauer</span>
+              <span class="athlete-total"><strong>100,70</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – Pflicht: M2 – ToF: 7,50 | HD: 9,50 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>30,00</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 14,0 | H1: 7,0 | H2: 7,0 | H3: 7,0 | H4: 7,0 – ToF: 9,00 | HD: 9,50 | Schwierigkeit: 1,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>33,50</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 15,5 | H1: 7,5 | H2: 7,5 | H3: 8,0 | H4: 8,2 – ToF: 10,50 | HD: 9,50 | Schwierigkeit: 1,7 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>37,20</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Aurelia Füssel</span>
+              <span class="athlete-total"><strong>98,40</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – Pflicht: M1 – ToF: 7,80 | HD: 9,80 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>30,60</strong></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 7,80 | HD: 9,50 | Schwierigkeit: 1,1 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>31,40</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 16,0 | H1: 8,0 | H2: 8,0 | H3: 8,0 | H4: 8,0 – ToF: 10,00 | HD: 9,50 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>36,40</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Romy Gerschek</span>
+              <span class="athlete-total"><strong>78,20</strong> Pkt.</span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: 7,2 | H1: 3,6 | H2: 3,6 | H3: 3,6 | H4: 3,6 – Pflicht: M2 – ToF: 4,00 | HD: 3,90 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 4</span>
+              <span class="rd-result"><s>15,10</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">1. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 7,50 | HD: 9,50 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>30,90</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div><div class="rd-line">
+              <span class="rd-label">2. Kür</span>
+              <span class="rd-detail">Ausführung: 13,0 | H1: 6,5 | H2: 6,5 | H3: 6,5 | H4: 6,5 – ToF: 8,80 | HD: 9,50 | Schwierigkeit: 0,9 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><s>32,20</s>&nbsp;<span class="muted">(gestr.)</span></span>
+            </div>
+          </div></div>
         </div>
 
 <div class="section-box">
   <h2>Kampfgericht</h2>
-  <table><thead><tr><th>Rolle</th><th>Kampfrichter</th></tr></thead>
-  <tbody><tr><td>Wettkampfleiter</td><td>WKL (TBR) – A-Lizenz</td></tr><tr><td>Haltung 1</td><td>H1 (VfL) – D-Lizenz</td></tr><tr><td>Haltung 2</td><td>H2 (TVM) – C-Lizenz</td></tr><tr><td>Haltung 3</td><td>H3 (TBR) – B-Lizenz</td></tr><tr><td>Haltung 4</td><td>H4 (VfL) – I-Lizenz</td></tr><tr><td>Schwierigkeit</td><td>SWK (TVM) – A-Lizenz</td></tr><tr><td>Protokoll</td><td>Prot1</td></tr></tbody></table>
+  <div class="officials-grid"><div class="official-entry"><span class="official-role">Wettkampfleiter:</span> WKL (TBR) – A-Lizenz</div><div class="official-entry"><span class="official-role">Haltung 1:</span> H1 (VfL) – D-Lizenz</div><div class="official-entry"><span class="official-role">Haltung 2:</span> H2 (TVM) – C-Lizenz</div><div class="official-entry"><span class="official-role">Haltung 3:</span> H3 (TBR) – B-Lizenz</div><div class="official-entry"><span class="official-role">Haltung 4:</span> H4 (VfL) – I-Lizenz</div><div class="official-entry"><span class="official-role">Schwierigkeit:</span> SWK (TVM) – A-Lizenz</div><div class="official-entry"><span class="official-role">Protokoll:</span> Prot1</div></div>
 </div>
 
 <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
-<div class="footer">Erstellt: 6.3.2026, 09:10:35</div>
+<div class="footer">Erstellt: 6.3.2026, 09:25:09</div>
 </div></body></html>
