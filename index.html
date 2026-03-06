@@ -1,190 +1,86 @@
- <!DOCTYPE html>
-  <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wettkampf-Protokolle</title>
-    <link rel="stylesheet" href="styles.css">
-	
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>🏆 Wettkampf-Protokolle</h1>
-        <p class="subtitle">Würrtembergische Trampolinliga</p>
-      </header>
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liga Protokoll – Übersicht</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f8fafc;color:#1e293b}
+.wrap{max-width:900px;margin:0 auto;padding:24px}
+header{background:#1e3a5f;color:#fff;padding:16px 24px;margin-bottom:24px;border-radius:10px}
+header h1{margin:0;font-size:1.4rem}
+h2{font-size:1.1rem;font-weight:700;color:#1e40af;border-bottom:2px solid #1e40af;padding-bottom:6px;margin:24px 0 12px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card h3{margin:0 0 4px;font-size:1rem}
+.card h3 a{color:#1e40af;text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.card-link{display:block;text-decoration:none;color:inherit}
+.card-link:hover{border-color:#93c5fd;background:#f0f7ff}
+.card-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.meta{font-size:.8rem;color:#64748b;margin:4px 0 8px}
+.wk-list{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.wk-link{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;text-decoration:none;color:#1e293b;font-size:.85rem}
+.wk-link:hover{background:#f0f7ff;border-color:#93c5fd}
+.wk-date{color:#64748b;min-width:80px;font-size:.8rem}
+.wk-name{flex:1;font-weight:500}
+.wk-status{font-size:.7rem;padding:2px 8px;border-radius:10px;color:#fff;white-space:nowrap}
+.empty{color:#94a3b8;font-size:.85rem;font-style:italic}
+.footer{font-size:.72rem;color:#94a3b8;margin-top:32px;text-align:right}
+</style>
+</head><body>
+<div class="wrap">
+<header><h1>Liga Protokoll – Übersicht</h1></header>
 
-      <main>
-        <ul class="wettkampf-liste">
-		 
-         <li class="competition-card">
-		  <a href="competition-5/index.html">
-			<div class="card-content">
-			  <div class="league-title">Württ. Oberliga 2025</div>
+<h2>Schülerliga</h2>
+<div class="card">
+          <h3><a href="sl-ligarunde-6/">Württ. Schülerliga - Gruppe Nord</a></h3>
+          <p class="meta">2026 · 1 Wettkampf</p>
+          <div class="wk-list"><a href="sl-ligarunde-6/competition-3/" class="wk-link">
+            <span class="wk-date">07.03.2026</span>
+            <span class="wk-name">1. Wettkampftag</span>
+            <span class="wk-status" style="background:#94a3b8">Geplant</span>
+          </a></div>
+        </div><div class="card">
+          <h3><a href="sl-ligarunde-5/">Test1</a></h3>
+          <p class="meta">2025 · 1 Wettkampf</p>
+          <div class="wk-list"><a href="sl-ligarunde-5/competition-2/" class="wk-link">
+            <span class="wk-date">07.03.2026</span>
+            <span class="wk-name">1. WKT</span>
+            <span class="wk-status" style="background:#22c55e">Läuft</span>
+          </a></div>
+        </div>
 
-			  <div class="card-header">
-				<div class="left">
-				  <span class="date">29.11.2025 - 17:00 Uhr</span>
-				  <span class="location">📍 Sporthalle Ruit, Ostfildern</span>
-				</div>
-			  </div>
+<h2>Einzelwettkämpfe</h2>
+<a href="competition-4/" class="card card-link">
+          <div class="card-row">
+            <span class="wk-name">TB Ruit 2 vs. TB Ruit 3</span>
+            <span class="wk-status" style="background:#f59e0b">Beendet</span>
+          </div>
+          <p class="meta">29.11.2025 · Sporthalle Ruit, Ostfildern</p>
+        </a><a href="competition-5/" class="card card-link">
+          <div class="card-row">
+            <span class="wk-name">TB Ruit vs. VfL Sindelfingen</span>
+            <span class="wk-status" style="background:#f59e0b">Beendet</span>
+          </div>
+          <p class="meta">29.11.2025 · Sporthalle Ruit, Ostfildern</p>
+        </a><a href="competition-2/" class="card card-link">
+          <div class="card-row">
+            <span class="wk-name">VfL Sindelfingen 2 vs. TB Ruit 2</span>
+            <span class="wk-status" style="background:#f59e0b">Beendet</span>
+          </div>
+          <p class="meta">08.11.2025 · Sporthalle Goldberg Gymnasium, Sindelfingen</p>
+        </a><a href="competition-3/" class="card card-link">
+          <div class="card-row">
+            <span class="wk-name">VfL Sindelfingen 2 vs. TB Ruit 3</span>
+            <span class="wk-status" style="background:#f59e0b">Beendet</span>
+          </div>
+          <p class="meta">08.11.2025 · Sporthalle Goldberg Gymnasium, Sindelfingen</p>
+        </a><a href="competition-1/" class="card card-link">
+          <div class="card-row">
+            <span class="wk-name">TSV Musterhausen vs. SC Musterstadt</span>
+            <span class="wk-status" style="background:#f59e0b">Beendet</span>
+          </div>
+          <p class="meta">05.11.2025 · Sporthalle Musterhausen</p>
+        </a>
 
-			  <div class="teams-inline">
-				<div class="team-inline">
-				  <img src="competition-5/home-team-logo.png" height="50" alt="Heimteam Logo" class="team-logo">
-				  <span class="team-name">TB Ruit</span>
-				</div>
-
-				<span class="vs">vs.</span>
-
-				<div class="team-inline">
-				  <img src="competition-5/guest-team-logo.png" height="50" alt="Gastteam Logo" class="team-logo">
-				  <span class="team-name">VfL Sindelfingen</span>
-				</div>
-			  </div>
-
-			</div>
-		  </a>
-		</li>
-		 
-         <li class="competition-card">
-		  <a href="competition-4/index.html">
-			<div class="card-content">
-			  <div class="league-title">Württ. Landesliga 2025</div>
-
-			  <div class="card-header">
-				<div class="left">
-				  <span class="date">29.11.2025 - 13:30 Uhr</span>
-				  <span class="location">📍 Sporthalle Ruit, Ostfildern</span>
-				</div>
-			  </div>
-
-			  <div class="teams-inline">
-				<div class="team-inline">
-				  <img src="competition-4/home-team-logo.png" height="50" alt="Heimteam Logo" class="team-logo">
-				  <span class="team-name">TB Ruit 2</span>
-				</div>
-
-				<span class="vs">vs.</span>
-
-				<div class="team-inline">
-				  <img src="competition-4/guest-team-logo.png" height="50" alt="Gastteam Logo" class="team-logo">
-				  <span class="team-name">TB Ruit 3</span>
-				</div>
-			  </div>
-
-			</div>
-		  </a>
-		</li>
-		 
-         <li class="competition-card">
-		  <a href="competition-3/index.html">
-			<div class="card-content">
-			  <div class="league-title">Württ. Landesliga 2025</div>
-
-			  <div class="card-header">
-				<div class="left">
-				  <span class="date">08.11.2025 - 14:30 Uhr</span>
-				  <span class="location">📍 Sporthalle Goldberg Gymnasium Sindelfingen</span>
-				</div>
-			  </div>
-
-			  <div class="teams-inline">
-				<div class="team-inline">
-				  <img src="competition-3/home-team-logo.png" height="50" alt="Heimteam Logo" class="team-logo">
-				  <span class="team-name">VfL Sindelfingen 2</span>
-				</div>
-
-				<span class="vs">vs.</span>
-
-				<div class="team-inline">
-				  <img src="competition-3/guest-team-logo.png" height="50" alt="Gastteam Logo" class="team-logo">
-				  <span class="team-name">TB Ruit 3</span>
-				</div>
-			  </div>
-
-			</div>
-		  </a>
-		</li>
-		 
-         <li class="competition-card">
-		  <a href="competition-2/index.html">
-			<div class="card-content">
-			  <div class="league-title">Württ. Landesliga 2025</div>
-
-			  <div class="card-header">
-				<div class="left">
-				  <span class="date">08.11.2025 - 12:30 Uhr</span>
-				  <span class="location">📍 Sporthalle Goldberg Gymnasium Sindelfingen</span>
-				</div>
-			  </div>
-
-			  <div class="teams-inline">
-				<div class="team-inline">
-				  <img src="competition-2/home-team-logo.png" height="50" alt="Heimteam Logo" class="team-logo">
-				  <span class="team-name">VfL Sindelfingen 2</span>
-				</div>
-
-				<span class="vs">vs.</span>
-
-				<div class="team-inline">
-				  <img src="competition-2/guest-team-logo.png" height="50" alt="Gastteam Logo" class="team-logo">
-				  <span class="team-name">TB Ruit 2</span>
-				</div>
-			  </div>
-
-			</div>
-		  </a>
-		</li>
-		 
-        <!-- <li class="competition-card">
-		  <a href="competition-1/index.html">
-			<div class="card-content">
-			  <div class="league-title">TESTWETTKAMPF</div>
-
-			  <div class="card-header">
-				<div class="left">
-				  <span class="date">04.11.2025</span>
-				  <span class="location">📍 Sporthalle Musterhausen</span>
-				</div>
-			  </div>
-
-			  <div class="teams-inline">
-				<div class="team-inline">
-				  <img src="competition-1/home-team-logo.png" height="50" alt="Heimteam Logo" class="team-logo">
-				  <span class="team-name">TSV Musterhausen</span>
-				</div>
-
-				<span class="vs">vs.</span>
-
-				<div class="team-inline">
-				  <img src="competition-1/guest-team-logo.png" height="50" alt="Gastteam Logo" class="team-logo">
-				  <span class="team-name">SC Musterstadt</span>
-				</div>
-			  </div>
-
-			</div>
-		  </a>
-		</li>-->
-
-
-          <!-- Platzhalter wenn keine Wettkämpfe -->
-          <!-- <li class="placeholder">
-            <p>Noch keine Wettkämpfe hochgeladen.</p>
-            <p class="hint">Wettkämpfe erscheinen hier automatisch nach dem ersten Upload aus der
-  Liga-Protokoll-App.</p>
-          </li> -->
-
-        </ul>
-      </main>
-
-      <footer>
-        <p>Automatisch generiert mit Liga-Protokoll-App</p>
-      </footer>
-    </div>
-  </body>
-  </html>
-
-
-
-
+<div class="footer">Aktualisiert: 6.3.2026, 08:42:27</div>
+</div></body></html>
