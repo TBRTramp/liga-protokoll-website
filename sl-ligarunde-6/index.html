@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Württ. Schülerliga - Gruppe Nord</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6;padding:2rem}
+.container{max-width:1000px;margin:0 auto;background:#fff;border-radius:1rem;box-shadow:0 10px 25px rgba(0,0,0,.1);overflow:hidden}
+/* Hero header – lila für Schülerliga */
+.page-header{background:linear-gradient(135deg,#4c1d95 0%,#6d28d9 100%);color:#fff;padding:2.5rem 2rem;text-align:center}
+.page-header h1{font-size:2.2rem;font-weight:900;margin-bottom:.5rem}
+.page-header .season{font-size:1rem;opacity:.85;margin-top:.25rem}
+/* Content */
+.content{padding:2rem}
+/* Section blocks */
+.section{margin-bottom:2rem}
+.section-hdr{background:#1e293b;color:#fff;padding:.85rem 1.25rem;font-size:1rem;font-weight:700;border-radius:.6rem .6rem 0 0}
+.section-body{border:1px solid #e2e8f0;border-top:none;border-radius:0 0 .6rem .6rem;overflow:hidden}
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:#f1f5f9;color:#475569;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #e2e8f0}
+td{padding:10px 12px;border-bottom:1px solid #f1f5f9}
+tr:last-child td{border-bottom:none}
+/* Placement badge */
+.place{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-weight:700;font-size:.9rem;color:#fff}
+/* Competition cards */
+.wk-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;text-decoration:none;color:#1e293b;border-bottom:1px solid #f1f5f9;transition:background .15s}
+.wk-card:last-child{border-bottom:none}
+.wk-card:hover{background:#faf5ff}
+.wk-left{display:flex;flex-direction:column;gap:2px;flex:1}
+.wk-date{font-size:.8rem;color:#94a3b8}
+.wk-name{font-weight:700;font-size:.95rem}
+.wk-loc{font-size:.8rem;color:#64748b}
+.wk-status{font-size:.75rem;padding:4px 12px;border-radius:999px;color:#fff;white-space:nowrap;font-weight:600;flex-shrink:0}
+.empty{color:#94a3b8;font-size:.9rem;font-style:italic;padding:16px}
+/* Footer */
+.back-link{display:inline-block;margin-top:.5rem;font-size:.9rem;color:#7c3aed;text-decoration:none}
+.footer{text-align:center;padding:1.5rem 2rem;background:#f8fafc;color:#94a3b8;font-size:.75rem;border-top:1px solid #e2e8f0}
+@media(max-width:600px){body{padding:.75rem}.page-header h1{font-size:1.6rem}}
+@media print{body{background:#fff;padding:0}.container{box-shadow:none;border-radius:0}}
+</style>
+</head><body>
+<div class="container">
+
+<div class="page-header">
+  <h1>Württ. Schülerliga - Gruppe Nord</h1>
+  <p class="season">Saison 2026</p>
+</div>
+
+<div class="content">
+
+<div class="section">
+  <div class="section-hdr">Ligatabelle</div>
+  <div class="section-body">
+    <table><thead><tr>
+      <th>#</th><th>Mannschaft</th>
+      <th style="text-align:center">WK</th>
+      <th style="text-align:center">WKP</th>
+      <th style="text-align:center">DGP</th>
+      <th style="text-align:right">GP</th>
+    </tr></thead><tbody><tr><td colspan="6" style="color:#94a3b8;font-style:italic;padding:16px 12px">Noch keine abgeschlossenen Wettkämpfe</td></tr></tbody></table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-hdr">Wettkämpfe</div>
+  <div class="section-body"><a href="competition-3/" class="wk-card">
+            <div class="wk-left">
+              <span class="wk-date">07.03.2026</span>
+              <span class="wk-name">1. Wettkampftag</span>
+              <span class="wk-loc">📍 Schwäbisch Gmünd</span>
+            </div>
+            <span class="wk-status" style="background:#94a3b8">Geplant</span>
+          </a></div>
+</div>
+
+<a class="back-link" href="../">← Zurück zur Übersicht</a>
+
+</div><!-- /content -->
+
+<div class="footer">Aktualisiert: 7.3.2026, 09:55:58 &nbsp;·&nbsp; Liga Protokoll App</div>
+</div><!-- /container -->
+</body></html>
