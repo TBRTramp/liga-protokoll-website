@@ -1,10 +1,502 @@
 <!DOCTYPE html>
 <html lang="de"><head>
-<meta charset="UTF-8">
-<title>1. Wettkampftag – Württ. Schülerliga - Gruppe Nord</title>
-<style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{font-size:1.5rem}p{color:#64748b}</style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protokoll – 1. Wettkampftag</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6;padding:2rem}
+.container{max-width:1100px;margin:0 auto;background:#fff;border-radius:1rem;box-shadow:0 10px 25px rgba(0,0,0,.1);overflow:hidden}
+/* Hero header */
+.page-header{background:linear-gradient(135deg,#1e293b 0%,#334155 100%);color:#fff;padding:2.5rem 2rem;text-align:center}
+.page-header h1{font-size:2rem;font-weight:900;margin-bottom:1rem}
+.header-info{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}
+.header-chip{font-size:.9rem;background:rgba(255,255,255,.12);padding:.35rem .9rem;border-radius:.4rem}
+/* Content */
+.content{padding:2rem}
+/* Section blocks */
+.section{margin-bottom:2rem}
+.section-hdr{background:#1e293b;color:#fff;padding:.85rem 1.25rem;font-size:1rem;font-weight:700;border-radius:.6rem .6rem 0 0}
+.section-body{border:1px solid #e2e8f0;border-top:none;border-radius:0 0 .6rem .6rem;padding:1.25rem;background:#fff}
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:#f1f5f9;color:#475569;padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #e2e8f0;white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid #f1f5f9;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+/* Badges */
+.place{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-weight:700;font-size:.9rem;color:#fff}
+.team-row{display:flex;align-items:center;gap:10px}
+.team-logo{width:32px;height:32px;object-fit:contain;border-radius:4px}
+.num-cell{text-align:right}.num-cell.center{text-align:center}
+.rnd-score{font-weight:700;font-size:1rem;color:#1e293b}
+.rnd-dgp{font-size:.72rem;color:#94a3b8;margin-top:2px}
+/* Team cards */
+.team-card{background:#fff;border:1px solid #e2e8f0;border-radius:.75rem;margin-bottom:1.25rem;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.team-card-hdr{display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f1f5f9;border-bottom:1px solid #e2e8f0;font-size:1rem;font-weight:700}
+.team-athletes{padding:0}
+.athlete-row{padding:10px 16px;border-bottom:1px solid #f8fafc}
+.athlete-row:last-child{border-bottom:none}
+.athlete-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.athlete-name{font-weight:600;font-size:.9rem}
+.athlete-total{font-weight:700;font-size:.9rem;color:#1e293b}
+.prov-badge{background:#fef9c3;color:#a16207;font-size:.65rem;padding:1px 5px;border-radius:3px;margin-left:6px;font-weight:600}
+/* Round detail lines */
+.rd-line{display:flex;align-items:baseline;gap:8px;font-size:.75rem;color:#1e293b;line-height:1.6}
+.rd-line.ak-detail-row{font-style:italic;color:#94a3b8}
+.rd-label{flex-shrink:0;width:48px;color:#64748b;font-weight:600;white-space:nowrap}
+.rd-detail{flex:1;color:#64748b}
+.rd-result{flex-shrink:0;width:72px;text-align:right;font-weight:700;white-space:nowrap}
+/* AK / dropped */
+.ak{background:#94a3b8;color:#fff;font-size:.6rem;padding:1px 3px;border-radius:3px;margin-left:3px;font-style:normal}
+.muted{color:#94a3b8;font-weight:400}
+/* Officials */
+.officials-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:.875rem}
+.official-entry{color:#374151}
+.official-role{font-weight:600;color:#1e293b}
+/* Nav + Footer */
+.back-link{display:inline-block;margin-top:.5rem;font-size:.9rem;color:#3b82f6;text-decoration:none}
+.footer{text-align:center;padding:1.5rem 2rem;background:#f8fafc;color:#94a3b8;font-size:.75rem;border-top:1px solid #e2e8f0}
+@media(max-width:700px){body{padding:.75rem}.page-header h1{font-size:1.5rem}}
+@media print{body{background:#fff;padding:0}.container{box-shadow:none;border-radius:0}.team-card{page-break-inside:avoid}.back-link{display:none}}
+</style>
 </head><body>
-<h1>1. Wettkampftag</h1>
-<p>Württ. Schülerliga - Gruppe Nord</p>
-<p>Wettkampf wird vorbereitet – Ergebnisse folgen.</p>
+<div class="container">
+
+<div class="page-header">
+  <h1>Wettkampfprotokoll</h1>
+  <div class="header-info">
+    <span class="header-chip">🏆 1. Wettkampftag</span>
+    <span class="header-chip">📅 Samstag, 07.03.2026</span>
+    <span class="header-chip">📍 Schwäbisch Gmünd</span>
+    <span class="header-chip">Württ. Schülerliga - Gruppe Nord</span>
+  </div>
+</div>
+
+<div class="content">
+
+<div class="section">
+  <div class="section-hdr">Endergebnis</div>
+  <div class="section-body" style="padding:0">
+    <table><thead><tr>
+        <th>#</th><th>Mannschaft</th>
+        <th class="num-cell">Pflicht</th><th class="num-cell">1. Kür</th><th class="num-cell">2. Kür</th>
+        <th class="num-cell">Gesamt</th><th class="num-cell center">WKP</th><th class="num-cell center">DGP ges.</th>
+      </tr></thead><tbody><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><img class="team-logo" src="team-16-logo.png" alt=""><strong>TB Ruit 1892 e.V. 1</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><strong>0,00</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">0</td>
+        </tr><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><img class="team-logo" src="team-17-logo.png" alt=""><strong>TB Ruit 1892 e.V. 2</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><strong>0,00</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">0</td>
+        </tr><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><img class="team-logo" src="team-18-logo.png" alt=""><strong>TV Wetzgau</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><strong>0,00</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">0</td>
+        </tr><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><img class="team-logo" src="team-19-logo.png" alt=""><strong>VfL Sindelfingen e.V. 1</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><strong>0,00</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">0</td>
+        </tr><tr>
+          <td><span class="place" style="background:#f59e0b">1</span></td>
+          <td><div class="team-row"><img class="team-logo" src="team-20-logo.png" alt=""><strong>VfL Sindelfingen e.V. 2</strong></div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><div class="rnd-score">–</div><div class="rnd-dgp">DGP: –</div></td>
+          <td class="num-cell"><strong>0,00</strong></td>
+          <td class="num-cell center">3</td>
+          <td class="num-cell center">0</td>
+        </tr></tbody></table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-hdr">Detailergebnisse</div>
+  <div class="section-body">
+    <div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <img class="team-logo" src="team-16-logo.png" alt=""><strong>TB Ruit 1892 e.V. 1</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Aurora Pisanu</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Jan Felde</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Jakob Faiß</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Sophie Lang</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Lillien Scheibler</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Laura Fodor</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <img class="team-logo" src="team-17-logo.png" alt=""><strong>TB Ruit 1892 e.V. 2</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Leonita Busati</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Nele Strobel</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Lara Toebe</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Erica Trif</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Estera Trif</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <img class="team-logo" src="team-18-logo.png" alt=""><strong>TV Wetzgau</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Amelie Sophie Ascher</span>
+              <span class="athlete-total"><strong>30,34</strong> Pkt.</span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: 12,8 | H1: 6,6 | H2: 6,5 | H3: 6,3 | H4: 0,0 – Pflicht: p3 – ToF: 8,04 | HD: 9,30 | Schwierigkeit: 0,0 – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">30,34&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Johanna Fischer</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Franca Szegedi</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Juli Tonigold</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Mina Jensen</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Zoe Schreiber</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Zita Hoerschkes</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Kylie Jacoby</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Hanna Wild</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Sophia Wild</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <img class="team-logo" src="team-19-logo.png" alt=""><strong>VfL Sindelfingen e.V. 1</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Leni Caroline Schneider</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Megi Drici</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Lisa Kies</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Mateo Berghoff</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Maximilian Brand</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div></div>
+        </div><div class="team-card">
+          <div class="team-card-hdr">
+            <span class="place" style="background:#f59e0b">1</span>
+            <img class="team-logo" src="team-20-logo.png" alt=""><strong>VfL Sindelfingen e.V. 2</strong>
+          </div>
+          <div class="team-athletes"><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Luna Holzer</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line ak-detail-row">
+              <span class="rd-label">Pflicht<span class="ak">AK</span></span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><span class="muted">–&nbsp;(AK)</span></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Kira Amy Heinz</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Maria Franzen</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Nicole Zlobina</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Romy Theierl</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div><div class="athlete-row">
+            <div class="athlete-hdr">
+              <span class="athlete-name">Carolin Daniela Hett</span>
+              <span class="athlete-total"></span>
+            </div>
+            <div class="rd-line">
+              <span class="rd-label">Pflicht</span>
+              <span class="rd-detail">Ausführung: – | H1: – | H2: – | H3: – | H4: – – ToF: – | HD: – | Schwierigkeit: – – Abzug: -0,0 | Sprünge: 10</span>
+              <span class="rd-result"><strong>–</strong></span>
+            </div>
+          </div></div>
+        </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-hdr">Kampfgericht</div>
+  <div class="section-body">
+    <div class="officials-grid"><p style="color:#94a3b8;font-size:.8rem">Keine Kampfgericht-Einträge</p></div>
+  </div>
+</div>
+
+<a class="back-link" href="index.html">← Zurück zur Übersicht</a>
+
+</div><!-- /content -->
+
+<div class="footer">Erstellt: 7.3.2026, 11:00:21 &nbsp;·&nbsp; Liga Protokoll App</div>
+</div><!-- /container -->
 </body></html>
